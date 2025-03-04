@@ -11,15 +11,7 @@ export type Blog = {
     width: number;
     height: number;
   };
-  category: [
-    {
-      name: string;
-    },
-    {
-      name: string;
-    },
-    {
-      name: string;
-    },
-  ];
+  category: {
+    name: string;
+  };
 };

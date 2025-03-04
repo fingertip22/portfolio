@@ -18,7 +18,7 @@ const imageLoader: ImageLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}&auto=format`;
 };
 
-const Posts: React.FC<Props> = ({ blog }) => {
+const Posts: React.FC<Props> = ({ blog }: {blog: Blog[]}) => {
   return (
     <div>
       <div className={styles.posts}>

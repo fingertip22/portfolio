@@ -5,13 +5,13 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
-import styles from "@/styles/Blogid.module.css";
+import styles from "@/styles/BlogId.module.css";
 
 type Props = {
-  blog: Blog[];
+  blog: Blog;
 };
 
-const BlogId: React.FC<Props> = ({ blog }: any) => {
+const BlogId: React.FC<Props> = ({ blog }: {blog: Blog}) => {
   return (
     <main>
       <div>
@@ -31,7 +31,7 @@ const BlogId: React.FC<Props> = ({ blog }: any) => {
 
         <div
           className={styles.post}
-          dangerouslySetInnerHTML={{ __html: blog.content }}
+          dangerouslySetInnerHTML={{ __html: blog.body }}
         />
       </div>{" "}
     </main>
